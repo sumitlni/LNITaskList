@@ -12,6 +12,7 @@
 		955504251D0A3287000B3E41 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 955504231D0A3287000B3E41 /* Main.storyboard */; };
 		955504271D0A3287000B3E41 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 955504261D0A3287000B3E41 /* Assets.xcassets */; };
 		9555042A1D0A3287000B3E41 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 955504281D0A3287000B3E41 /* LaunchScreen.storyboard */; };
+		955504321D0A32A5000B3E41 /* LNITaskList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 955504311D0A32A5000B3E41 /* LNITaskList.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,7 @@
 		955504261D0A3287000B3E41 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		955504291D0A3287000B3E41 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9555042B1D0A3287000B3E41 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		955504311D0A32A5000B3E41 /* LNITaskList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LNITaskList.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +62,7 @@
 				955504261D0A3287000B3E41 /* Assets.xcassets */,
 				955504281D0A3287000B3E41 /* LaunchScreen.storyboard */,
 				9555042B1D0A3287000B3E41 /* Info.plist */,
+				955504311D0A32A5000B3E41 /* LNITaskList.swift */,
 			);
 			path = LNITaskListDemo;
 			sourceTree = "<group>";
@@ -135,6 +138,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				955504321D0A32A5000B3E41 /* LNITaskList.swift in Sources */,
 				955504221D0A3287000B3E41 /* ViewController.swift in Sources */,
 				955504201D0A3287000B3E41 /* AppDelegate.swift in Sources */,
 			);

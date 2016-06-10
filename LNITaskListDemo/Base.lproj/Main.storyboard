@@ -1,13 +1,15 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="LNITaskListDemo" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -15,11 +17,109 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kGA-Yp-ajE">
+                                <rect key="frame" x="0.0" y="20" width="600" height="44"/>
+                                <items>
+                                    <navigationItem title="LNITaskList Demo" id="53G-WN-ifg"/>
+                                </items>
+                            </navigationBar>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xvn-xh-VZc">
+                                <rect key="frame" x="20" y="305" width="560" height="294.5"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleFootnote"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textView>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="D0O-3V-CC4">
+                                <rect key="frame" x="275" y="127" width="51" height="31"/>
+                            </switch>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="NfK-JC-XKu">
+                                <rect key="frame" x="275" y="168" width="51" height="31"/>
+                            </switch>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Xb0-TK-0QK">
+                                <rect key="frame" x="275" y="209" width="51" height="31"/>
+                            </switch>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qiR-SK-dol">
+                                <rect key="frame" x="261" y="255" width="77" height="30"/>
+                                <state key="normal" title="Start Tasks"/>
+                                <connections>
+                                    <action selector="startTasks:" destination="BYZ-38-t0r" eventType="touchUpInside" id="7Bl-Ol-P4R"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Task 1 Success?" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ADY-6x-Nn1">
+                                <rect key="frame" x="28" y="132" width="239" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Task 2 Success?" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dkC-5z-EEY">
+                                <rect key="frame" x="28" y="173" width="239" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Task 3 Success?" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DcN-p7-bPK">
+                                <rect key="frame" x="28" y="214" width="239" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="Toggle whether each of the tasks below will succeed or fail. Then hit &quot;Start Tasks&quot; to see how LNITaskList works." textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="P3U-yq-Xiw">
+                                <rect key="frame" x="28" y="72" width="544" height="40.5"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="P3U-yq-Xiw" firstAttribute="top" secondItem="kGA-Yp-ajE" secondAttribute="bottom" constant="8" id="3Mi-7B-UqA"/>
+                            <constraint firstItem="DcN-p7-bPK" firstAttribute="leading" secondItem="ADY-6x-Nn1" secondAttribute="leading" id="7hN-O0-6D0"/>
+                            <constraint firstItem="D0O-3V-CC4" firstAttribute="leading" secondItem="ADY-6x-Nn1" secondAttribute="trailing" constant="8" id="8EW-Hh-650"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Xvn-xh-VZc" secondAttribute="bottom" id="8F5-Ui-q43"/>
+                            <constraint firstItem="qiR-SK-dol" firstAttribute="top" secondItem="DcN-p7-bPK" secondAttribute="bottom" constant="20" id="ARw-YY-mLu"/>
+                            <constraint firstItem="D0O-3V-CC4" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="CDM-ok-Uzs"/>
+                            <constraint firstItem="D0O-3V-CC4" firstAttribute="centerY" secondItem="ADY-6x-Nn1" secondAttribute="centerY" id="Ex5-yV-FBA"/>
+                            <constraint firstItem="Xb0-TK-0QK" firstAttribute="centerY" secondItem="DcN-p7-bPK" secondAttribute="centerY" id="IR4-lS-rYW"/>
+                            <constraint firstItem="Xb0-TK-0QK" firstAttribute="leading" secondItem="DcN-p7-bPK" secondAttribute="trailing" constant="8" symbolic="YES" id="NfL-wb-BCV"/>
+                            <constraint firstItem="Xb0-TK-0QK" firstAttribute="centerX" secondItem="D0O-3V-CC4" secondAttribute="centerX" id="PHl-sQ-s3j"/>
+                            <constraint firstItem="P3U-yq-Xiw" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="8" id="Qj8-Qt-Dza"/>
+                            <constraint firstItem="Xvn-xh-VZc" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="UZ4-0p-KCG"/>
+                            <constraint firstItem="ADY-6x-Nn1" firstAttribute="top" secondItem="P3U-yq-Xiw" secondAttribute="bottom" constant="20" id="Vnr-vl-txb"/>
+                            <constraint firstItem="kGA-Yp-ajE" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-20" id="W7X-ri-HQ5"/>
+                            <constraint firstItem="dkC-5z-EEY" firstAttribute="top" secondItem="ADY-6x-Nn1" secondAttribute="bottom" constant="20" id="c7L-Fb-fDL"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="kGA-Yp-ajE" secondAttribute="trailing" constant="-20" id="dQh-Lg-y1K"/>
+                            <constraint firstItem="kGA-Yp-ajE" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="df0-qQ-PqI"/>
+                            <constraint firstItem="NfK-JC-XKu" firstAttribute="centerX" secondItem="D0O-3V-CC4" secondAttribute="centerX" id="dfe-km-dPQ"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Xvn-xh-VZc" secondAttribute="trailing" id="e19-yc-GD6"/>
+                            <constraint firstItem="dkC-5z-EEY" firstAttribute="leading" secondItem="ADY-6x-Nn1" secondAttribute="leading" id="hJz-Dv-Sfd"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="D0O-3V-CC4" secondAttribute="trailing" id="j9Q-Yn-HXm"/>
+                            <constraint firstItem="NfK-JC-XKu" firstAttribute="centerY" secondItem="dkC-5z-EEY" secondAttribute="centerY" id="kSN-5g-oxA"/>
+                            <constraint firstItem="DcN-p7-bPK" firstAttribute="top" secondItem="dkC-5z-EEY" secondAttribute="bottom" constant="20" id="lIY-FB-ZeY"/>
+                            <constraint firstItem="Xvn-xh-VZc" firstAttribute="top" secondItem="qiR-SK-dol" secondAttribute="bottom" constant="20" id="nQ1-E2-0WC"/>
+                            <constraint firstItem="NfK-JC-XKu" firstAttribute="leading" secondItem="dkC-5z-EEY" secondAttribute="trailing" constant="8" symbolic="YES" id="oIt-FP-2no"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="P3U-yq-Xiw" secondAttribute="trailing" constant="8" id="pZe-8w-0Ol"/>
+                            <constraint firstItem="qiR-SK-dol" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="uVf-Yq-k39"/>
+                            <constraint firstItem="ADY-6x-Nn1" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="8" id="xDD-85-hUq"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="j9Q-Yn-HXm"/>
+                            </mask>
+                        </variation>
                     </view>
+                    <connections>
+                        <outlet property="startButton" destination="qiR-SK-dol" id="PaW-dj-iS8"/>
+                        <outlet property="switch1" destination="D0O-3V-CC4" id="Xao-lr-kJW"/>
+                        <outlet property="switch2" destination="NfK-JC-XKu" id="0gG-2S-Y86"/>
+                        <outlet property="switch3" destination="Xb0-TK-0QK" id="uLD-A6-dFk"/>
+                        <outlet property="textView" destination="Xvn-xh-VZc" id="2Y3-Yn-Jeh"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="340" y="359"/>
         </scene>
     </scenes>
 </document>
