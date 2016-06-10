@@ -34,13 +34,13 @@ class ViewController: UIViewController {
     @IBOutlet weak var switch3: UISwitch!
     @IBOutlet weak var startButton: UIButton!
     @IBOutlet weak var textView: UITextView!
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         self.textView.text = ""
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -53,11 +53,11 @@ class ViewController: UIViewController {
     
     func asyncTaskWithAnswer(name:String, taskList:LNITaskList, answer:Bool) {
         dispatch_async(dispatch_get_main_queue()) {
-            self.log("Now executing \(name) with answer = \(answer)")
+            self.log("Now executing \(name) with result = \(answer)")
             taskList.markDone(answer)
         }
     }
-
+    
     @IBAction func startTasks(sender: AnyObject) {
         textView.text = ""
         
@@ -65,17 +65,16 @@ class ViewController: UIViewController {
         let taskList = LNITaskList()
         taskList.onSuccess { () in
             self.log("Success!")
-        }.onFailure { () in
-            self.log("Failed!")
-        }.addStep { () in
-            self.asyncTaskWithAnswer("Task 1", taskList: taskList, answer: self.switch1.on)
-            }.addStep { () in
+            }.onFailure {
+                self.log("Failed!")
+            }.addStep {
+                self.asyncTaskWithAnswer("Task 1", taskList: taskList, answer: self.switch1.on)
+            }.addStep {
                 self.asyncTaskWithAnswer("Task 2", taskList: taskList, answer: self.switch2.on)
-            }.addStep { () in
+            }.addStep {
                 self.asyncTaskWithAnswer("Task 3", taskList: taskList, answer: self.switch3.on)
-        }.start()
-        
+            }.start()
     }
-
+    
 }
 
