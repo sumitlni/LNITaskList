@@ -17,8 +17,12 @@ LNITaskList helps you do exactly that. Take the LNITaskList.swift from this proj
             }.start()
 
 In all the asynchronous "steps", call
+
     taskList.markDone(true) // When the async step succeeds
+
 or
+
     taskList.markDone(false) // When the async step fails
+
 
 That's it! Take a look at the demo app for more information.
